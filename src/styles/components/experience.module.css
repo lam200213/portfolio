@@ -1,0 +1,105 @@
+/* =========================
+   Experience Section Layout
+   ========================= */
+
+.experienceSection {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--background-color);
+}
+
+.experienceTimeline {
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.experienceTimeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.experienceItem {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-base);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+.experienceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme-specific overrides */
+:global(body.theme-dark) :global([class*="experienceItem"]) {
+  background-color: #23272f;
+  color: #f8fafc;
+  border: 1px solid #2d323b;
+}
+
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.experienceTitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.experienceDate {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.experienceCompany {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.experienceDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.experienceSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.skillTag {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .experienceTimeline::before {
+    left: 0;
+  }
+  .experienceItem {
+    margin-left: var(--spacing-lg);
+  }
+  .experienceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+} 
