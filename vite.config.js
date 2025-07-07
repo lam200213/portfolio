@@ -6,6 +6,9 @@ import { visualizer } from 'rollup-plugin-visualizer'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/portfolio/',
+  server: {
+    port: 5174, // Or any other port you prefer
+  },
   plugins: [
     react(),
     viteCompression(),

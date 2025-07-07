@@ -69,7 +69,7 @@ Follow these steps to set up the portfolio template locally.
    ```bash
    npm run dev
    ```
-   Open `http://localhost:5173` or other port according to the instruction to view the portfolio locally.
+   Open `http://localhost:5174` or other port defined in vite.config.js
 
 ## Deployment to GitHub Pages
 
